@@ -1,5 +1,4 @@
 export default {
-  // Global page headers
   head: {
     title: 'blog-dashboard',
     htmlAttrs: {
@@ -16,32 +15,33 @@ export default {
     ]
   },
 
-  // Global CSS
   css: [
     '~/assets/css/tailwind.css',
   ],
 
-  // Plugins to run before rendering page
-  plugins: [],
+  plugins: [{ src: '~/plugins/toast.js', mode: 'client' }],
 
-  // Auto import components
   components: true,
 
-  // Modules for dev and build
   buildModules: [
     '@nuxtjs/tailwindcss',
   ],
 
-  // Modules
   modules: [
-    '@nuxtjs/axios',  // Add this line
+    '@nuxtjs/axios',
   ],
 
-  // Axios Configuration
   axios: {
-    baseURL: 'https://junior-developer-assessment-blog.onrender.com',  // Base URL of your API
+    baseURL: 'https://junior-developer-assessment-blog.onrender.com/api',  
   },
 
-  // Build Configuration
   build: {},
+
+  // Production configuration settings
+  vue: {
+    config: {
+      productionTip: false, // Disable the production tip
+      devtools: false // Disable DevTools in production
+    }
+  }
 }
