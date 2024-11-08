@@ -90,7 +90,15 @@ export default {
   },
   methods: {
     async fetchPosts() {
-      await this.$store.dispatch('posts/fetchPosts', this.pagination.currentPage);
+      this.$store.dispatch('posts/fetchPosts', {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`,
+        },
+      })
+      .then(Response => {
+        console.log(response)
+      })
+      .catch(error => console.error(error))
     },
     changePage(newPage) {
       if (newPage >= 1 && newPage <= this.pagination.totalPages) {

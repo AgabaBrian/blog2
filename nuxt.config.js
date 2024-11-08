@@ -32,16 +32,16 @@ export default {
   ],
 
   axios: {
-    baseURL: 'https://junior-developer-assessment-blog.onrender.com/api',  
+    baseURL: 'https://junior-developer-assessment-blog.onrender.com/api',
   },
 
   build: {},
 
   // Production configuration settings
   vue: {
-    config: {
-      productionTip: false, // Disable the production tip
-      devtools: false // Disable DevTools in production
-    }
+    // config: {
+    //   productionTip: false, // Disable the production tip
+    //   devtools: false // Disable DevTools in production
+    // }
   }
 }

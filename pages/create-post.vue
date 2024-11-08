@@ -54,20 +54,20 @@ export default {
   },
   methods: {
     async createPost() {
-      try {
+      // try {
         // Send the new post data to the API
-        const response = await this.$axios.post('https://junior-developer-assessment-blog.onrender.com/posts', this.newPost);
+        const response = await this.$axios.post('/posts', this.newPost);
         
         // After the post is created, you can redirect the user to the dashboard or show a success message
         //await this.$axios.post('/posts',this.newPost);
         this.$toast.success("Post created successfully!");
         this.$router.push("/dashboard"); // Redirect to dashboard or wherever you want
 
-      } catch (error) {
-        console.error("Error creating post:", error.response || error);
-        // Log error details for better debugging
-        this.$toast.error('Failed to create post: ${error.response?.message || "Unknown error"}');
-      }
+      // } catch (error) {
+      //   console.error("Error creating post:", error.response || error);
+      //   // Log error details for better debugging
+      //   this.$toast.error('Failed to create post: ${error.response?.message || "Unknown error"}');
+      // }
     }
   }
 };
