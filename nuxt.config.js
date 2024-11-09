@@ -32,7 +32,7 @@ export default {
   ],
 
   axios: {
-    baseURL: 'https://junior-developer-assessment-blog.onrender.com/api',
+    baseURL: 'https://junior-developer-assessment-blog.onrender.com',
   },
 
   build: {},
